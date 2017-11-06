@@ -1,21 +1,30 @@
-import Signup from './Signup';
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Signup from "./Signup";
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      user: []
-    }
+      users: []
+    };
   }
 
   getUser(user) {
-    this.setState({user: this.state.user.push(user)});
-    console.log("my users", this.state.user);
+    if (!this.existingUser(user)) {
+      this.state.users.push(user);
+      this.setState({ users: this.state.users });
+    } else {
+      console.log("this email address is already registered", user.email);
+    }
+    console.log("my users", this.state.users);
   }
-  
+
+  existingUser(user) {
+    return this.state.users.some(item => item.email === user.email);
+  }
+
   render() {
     return (
       <div className="App">
@@ -26,7 +35,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <Signup getUser={this.getUser.bind(this)}/>
+        <Signup getUser={this.getUser.bind(this)} />
       </div>
     );
   }
