@@ -10,8 +10,9 @@
 .App-header {
   background-color: #222;
   height: 150px;
-  padding: 20px;
+  padding: 11px 1500px 100px 0px;
   color: white;
+
 }
 
 .App-title {
@@ -25,4 +26,17 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+.image{
+  width: 10%;
+  height: 100px;
+  margin-left: -1312px;
+}
+.Pikk{
+  width: 20%;
+  height: 150px;
+  margin-top: 50px
+}
+.abc{
+  /* background-image: url("back.jpg"); */
 }

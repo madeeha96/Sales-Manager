@@ -1,0 +1,14 @@
+.login{
+    color: 	#4FC1E9
+}
+
+.boxSep{
+    background-color: #f7f7f7;
+    border: 6px solid #ccc;
+    margin-top: 141px;
+    display: inline-block;
+    height: 247px;
+    width: 265px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
